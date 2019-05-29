@@ -1,18 +1,21 @@
 require_relative "geometric_base"
 
 class Sphere < GeometricBase
+  attr_writer :radius
+
   def initialize(radius)
+    @radius = radius
   end
 
   def area
-    0
+    area = 4 * (Math::PI * (@radius*@radius))
   end
 
   def perimeter
-    0
+    perimeter = 2 * (Math::PI * @radius)
   end
 
   def volume
-    0
+    volume = (4/3) * (Math::PI * (@radius*@radius*@radius))
   end
 end
